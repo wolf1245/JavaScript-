@@ -15,12 +15,18 @@
         let productPrice = 101.5; // цена товара
         let productQuantity = 50;  // количество единиц товара на складе
 
-        let count = prompt("Сколько единиц товара Вы хотите приобрести?", 1);
+        let count = +prompt("Сколько единиц товара Вы хотите приобрести?", 1);
         let totalSum = count * productPrice;
         let leftInStorage = productQuantity - count;
-
-        alert("Общая стоимость " + totalSum);
-        alert("Количество товара останется на складе после покупки" + leftInStorage);
+				// проверка
+				if (count > productQuantity){
+					alert(`Вы заказываете больше чем есть в наличии на складе: ${productQuantity}`);
+				} else if(count == 0 || isNaN(count)) {
+					alert(`Вы заказываете 0 или ввели неверное значение`);
+				} else {
+					alert("Общая стоимость: " + totalSum);
+					alert("Количество товара останется на складе после покупки: " + leftInStorage);
+				}
     </script>
 </body>
 </html>
