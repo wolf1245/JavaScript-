@@ -19,16 +19,13 @@
         let inputLogin = prompt("Введите логин");
         let inputPassword = prompt("Введите пароль");
 
-        if (inputLogin == login)
+        if (inputLogin == login && inputPassword == password)
         {
-            if (inputPassword == password)
-            {
-                alert("Вы авторизованы!");
-            }
+          alert("Вы авторизованы!");
         }
         else
         {
-            alert("Логин или пароль введены неправильно");
+          alert("Логин или пароль введены неправильно");
         }
     </script>
 </body>
