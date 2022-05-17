@@ -14,7 +14,23 @@
         0 если значение равно 0
     </pre>
     <script>
-        
+        let requestUser = +prompt("Введите любое числовое значение:");
+				let responceProgram;
+				// проверка
+				if(typeof(requestUser) === "number" && typeof (requestUser) === NaN) {
+					if(requestUser > 0) {
+						responceProgram = `Значение: ${requestUser} больше 0`;
+					} else if(requestUser == 0) {
+						responceProgram = `Значение: ${requestUser} равно 0`;
+					} else {
+						responceProgram = `Значение: ${requestUser} меньше 0`;
+					}
+				} else if(typeof (requestUser) === "string") {
+					responceProgram = "Вы ввели не число";
+				} else {
+					responceProgram = "Вы нечего не ввели";
+				}
+				alert(responceProgram);
     </script>
 </body>
 </html>
