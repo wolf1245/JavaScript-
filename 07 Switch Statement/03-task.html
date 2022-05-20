@@ -15,24 +15,15 @@
     <script>
         let country = prompt("введите название страны");
 
-        switch (country)
-        {
-            case "USA":
-            case "Great Britain":
-                alert("Английский язык");
-                break;
-            case "Germany":
-                alert("Немецкий язык");
-                break;
-            case "France":
-                alert("Французский язык");
-                break;
-
-            default:
-                alert("Указанной страны нет в списке");
-                break;
-
-        }
+        if(country == 'France') {
+					alert("Французский язык");
+				} else if(country == 'Germany') {
+					alert("Немецкий язык");
+				} else if(country == 'USA' || country == 'Great Britain') {
+					alert("Английский язык");
+				} else {
+					alert("Указанной страны нет в списке");
+				}
     </script>
 </body>
 
