@@ -12,7 +12,26 @@
         если значение 2 - "весна" и т.д. Выведите значение переменной result на экран. Решите задачу используя конструкцию switch.
     </pre>
     <script>
-        
+        let season = +prompt('Введите значения 1, 2, 3 или 4');
+				let rezult;
+				switch (season) {
+					case 1:
+						rezult = "зима";
+						break;
+				case 2:
+						rezult = "весна";
+						break;
+				case 3:
+						rezult = "лето";
+						break;
+				case 3:
+						rezult = "осень";
+						break;
+					default:
+						rezult = "Вы ввели неверное значение";
+						break;
+				}
+				alert(rezult);
     </script>
 </body>
 </html>
