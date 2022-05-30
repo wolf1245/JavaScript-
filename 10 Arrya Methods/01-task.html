@@ -14,6 +14,11 @@
     </pre>
     <script>
         let cities = ["London", "Paris", "Berlin", "Rome", "Budapest", "Lisbon", "Madrid", "Amsterdam"];
+				do {
+					let city = prompt("Введите город пример: Berlin");
+				} while (cities.indexOf(city) != -1);
+				cities.splice(city, 1);
+				alert(cities);
     </script>
 </body>
 </html>
