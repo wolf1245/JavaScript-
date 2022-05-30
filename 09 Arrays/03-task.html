@@ -13,6 +13,12 @@
     </pre>
     <script>
         let values = [10, 20, -2, 6, 11, -10, 125, -3, 8, 0, 3];
+				values.forEach((value, key) => {
+					if(value < 0) {
+						values[key] = 0;
+					}
+				});
+				console.log(values);
     </script>
 </body>
 </html>
