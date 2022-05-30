@@ -13,7 +13,16 @@
     </pre>
     <script>
         let values = [10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28 ];
-        
+				let sum = 0;
+				let sumMean = 0;
+        for(let number of values) {
+					sum += number;
+					sumMean = Math.floor(sum / values.length);
+					if(number > sumMean) {
+						console.log(number);
+					}
+				}
+				console.log(sumMean);
     </script>
 </body>
 </html>
