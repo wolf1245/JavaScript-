@@ -16,29 +16,20 @@
         let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
         let oddValues = [];
         let evenValues = [];
-        let oddValuesPosition = 0;
-        let evenValuesPosition = 0;
 
-        for (let value of values) {
-            if (value % 2 == 0) {
-                evenValues[evenValuesPosition] = value;
-                evenValuesPosition++;
-            }
-            else {
-                oddValues[oddValuesPosition] = value;
-                oddValuesPosition++;
-            }
-        }
+				values.forEach((value, key) => {
+					 if (value % 2 == 0) {
+						 evenValues[key] = value;
+					 } else {
+						 oddValues[key] = value;
+					 }
+				});
 
         console.log("Нечетные значения");
-        for (let oddVal of oddValues) {
-            console.log(oddVal);
-        }
+				console.log(oddValues.filter(value => value));
 
         console.log("Четные значения");
-        for (let evenVal of evenValues) {
-            console.log(evenVal);
-        }
+				console.log(evenValues.filter(value => value));
 
     </script>
 </body>
