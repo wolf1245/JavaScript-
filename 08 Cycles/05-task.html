@@ -28,7 +28,27 @@
         Сценарий: Правильно! Загаданное значение 56. Вы угадали с 4й попытки. 
     </pre>
     <script>
-        
+         let randomValue = Math.floor(Math.random() * 101);
+				 let userNumber = +prompt("Игра 'Угадай число' - введите предпологаемое число");
+				 let countAttempts = 1;
+				 while (true) {
+					 if (userNumber >= 0) {
+						if(userNumber == randomValue) {
+							alert(`Правильно! Загаданное значение ${userNumber}. Вы угадали с ${countAttempts} попытки`);
+							break;
+						} else {
+							countAttempts++;
+							if (userNumber < randomValue) {
+								userNumber = prompt(`введи число больше ${userNumber}`);
+							} else {
+								userNumber = prompt(`введи число меньше ${userNumber}`);
+							}
+						}
+					 } else {
+						 userNumber = prompt(`вы ввели не число`);
+					 }
+				 }
+				console.log(typeof(userNumber));
     </script>
 </body>
 </html>

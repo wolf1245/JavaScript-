@@ -13,6 +13,21 @@
     </pre>
     <script>
         let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
+				let valuesEven = [];
+				let valuesOdd = [];
+				valuesEven = values.filter((number) => {
+					if(number % 2 == 0) {
+						return number;
+					}
+				});
+				valuesOdd = values.filter((number) => {
+						if (number % 2 != 0) {
+							return number;
+						}
+				});
+				console.log(valuesEven);
+				console.log(valuesOdd);
+				console.log(values);
     </script>
 </body>
 </html>

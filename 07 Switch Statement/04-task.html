@@ -37,14 +37,32 @@
         console.log(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
         console.log(`Общая сумма по продукту '${product3}' составляет ${totalPriceProduct3}`);
 
+				let sale;
+				if (total >= 500 && total <= 1000) {
+					sale = total * 0.05;
+				} else if(total > 1000 && total <= 1500) {
+					sale = total * 0.10;
+				} else if(total > 1500) {
+					sale = total * 0.15;
+				} else {
+					sale = 0;
+				}
+
         let shipping = confirm("Заказываете доставку курьером?");
+				let ship = 0;
         if (shipping)
         {
-            total += 40;
-            console.log("Доставка 40");
+            ship = 40;
         }
-
-        console.log("Всего " + total);
+				if(sale != 0 && ship != 0) {
+					alert(`Всего ${total - sale + ship}, скидка ${sale}, доставка ${ship}`);
+				} else if(sale != 0 && ship == 0) {
+					alert(`Всего ${total - sale}, скидка ${sale}, доставка ${ship}`);
+				} else if(sale == 0 && ship != 0) {
+					alert(`Всего ${total + ship}, скидка ${sale}, доставка ${ship}`);
+				} else {
+					alert(`Всего ${total}, скидка ${sale}, доставка ${ship}`);
+				}
     </script>
 </body>
 

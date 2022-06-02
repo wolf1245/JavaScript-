@@ -20,9 +20,9 @@
         let productPrice2 = 56;
         let productPrice3 = 12.50;
 
-        let productQuantity1 = prompt(`Укажите количество продуктов '${product1}', цена ${productPrice1}`, 0);
-        let productQuantity2 = prompt(`Укажите количество продуктов '${product2}', цена ${productPrice2}`, 0);
-        let productQuantity3 = prompt(`Укажите количество продуктов '${product3}', цена ${productPrice3}`, 0);
+        let productQuantity1 = +prompt(`Укажите количество продуктов '${product1}', цена ${productPrice1}`, 0);
+        let productQuantity2 = +prompt(`Укажите количество продуктов '${product2}', цена ${productPrice2}`, 0);
+        let productQuantity3 = +prompt(`Укажите количество продуктов '${product3}', цена ${productPrice3}`, 0);
 
         // Выведите на экран сколько пользователю нужно заплатить за каждый продукт по отдельности и всего за все продукты
         // используйте форматированный вывод
@@ -31,10 +31,20 @@
         let totalPriceProduct3 = productPrice3 * productQuantity3; 
 
         let total = totalPriceProduct1 + totalPriceProduct2 + totalPriceProduct3;
-        console.log(`Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}`);
-        console.log(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
-        console.log(`Общая сумма по продукту '${product3}' составляет ${totalPriceProduct3}`);
-        console.log("Всего " + total);
+        alert(`Общая сумма по продукту '${product1}' составляет ${totalPriceProduct1}`);
+        alert(`Общая сумма по продукту '${product2}' составляет ${totalPriceProduct2}`);
+        alert(`Общая сумма по продукту '${product3}' составляет ${totalPriceProduct3}`);
+				// спрашиваем за доставку
+				let delivery = confirm("Вы будите заказывать доставку?");
+				// общая цена всего заказа которая или включает доставку или нет
+				let fullTotal;
+				// проверка доставки
+				if(delivery) {
+					fullTotal = `Всего с учетом стоимости доставки 40 грн: ${total + 40}`;
+				} else {
+					fullTotal = `Всего: ${total}`;
+				}
+        alert(fullTotal);
     </script>
 </body>
 </html>

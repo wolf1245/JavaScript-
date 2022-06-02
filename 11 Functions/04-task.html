@@ -15,12 +15,16 @@
     </pre>
     <script>
         let throwCount = +prompt("Сколько раз вы хотите бросить шестигранный кубик");
-
-        for (let i = 0; i < throwCount; i++) {
-            const result = random(1, 6);
-            console.log(result);
-        }
-
+				function random(min = 1, max)
+				{
+					const result = Math.round(Math.random() * (max - min) + min);
+					return result;
+				}
+				if(!isNaN(throwCount)) {
+					alert(random(1, throwCount));
+				}else {
+					throwCount = +prompt("Сколько раз вы хотите бросить шестигранный кубик");
+				}	
     </script>
 </body>
 

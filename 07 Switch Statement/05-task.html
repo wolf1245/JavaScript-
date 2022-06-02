@@ -18,24 +18,24 @@
         let expirience = prompt("Введите опыт работы в годах.");
 
         let adult, specialization, position;
-
-        if (age > 18)
-        {
-            adult = "совершеннолетний";
-        }
-        else
-        {
-            adult = "несовершеннолетний"
-        }
-
-        if (technology == 1)
-        {
-            specialization = "Frontend";
-        }
-        else
-        {
-            specialization = "Backend";
-        }
+				adult = age > 18 ? "совершеннолетний" : "несовершеннолетний";
+        // if (age > 18)
+        // {
+        //     adult = "совершеннолетний";
+        // }
+        // else
+        // {
+        //     adult = "несовершеннолетний"
+        // }
+				specialization = technology == 1 ? "Frontend" : "Backend";
+        // if (technology == 1)
+        // {
+        //     specialization = "Frontend";
+        // }
+        // else
+        // {
+        //     specialization = "Backend";
+        // }
 
         if (expirience == 0)
         {

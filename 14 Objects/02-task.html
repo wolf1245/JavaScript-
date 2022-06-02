@@ -20,6 +20,12 @@
             friends: 5,
             favoriteFruit: 'strawberry'
         }
+
+				for(const key in user) {
+					if(typeof(user[key]) == 'string') {
+						console.log(`имя = ${key}, значение = ${user[key]}`);
+					}
+				}
     </script>
 </body>
 </html>

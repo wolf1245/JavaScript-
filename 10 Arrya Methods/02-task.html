@@ -13,7 +13,20 @@
         После того, как пользователь ввел значение стоп, посчитайте сумму всех значений, которые находятся в массиве.
     </pre>
     <script>
-        
+			let values = [];
+				while (true) {
+					let input = prompt("Введите значение. Введите 'stop' для выхода из цикла.");
+					if (input == "stop") break;
+					let num = Number(input);
+					if (!isNaN(num)) {
+						values.push(num);
+					}
+				}
+				let sum = 0;
+				for (const val of values) {
+					sum += val;
+				}
+				alert("Сумма всех введенных элементов " + sum);
     </script>
 </body>
 </html>

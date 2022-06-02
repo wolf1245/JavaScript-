@@ -11,7 +11,21 @@
         Запросите у пользователя число. Выведите все числа в обратном порядке от введенного пользователем значения до 1. Используйте для решения рекурсию.
     </pre>
     <script>
-        
+        let number = +prompt("Введите число :");
+				if(!isNaN(number)) {
+					printNumber(number);
+				} else {
+					number = +prompt("Введите число :");
+				}
+
+				function printNumber(value) {
+						console.log(value);
+						if (value == 1)
+							return 1;
+						else {
+							printNumber(value--);
+						}
+					}
     </script>
 </body>
 </html>

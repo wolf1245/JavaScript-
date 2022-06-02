@@ -11,7 +11,19 @@
         Запросите у пользователя число, посчитайте сумму всех числе между 0 и введенным значением и отобразите результат на экран.
     </pre>
     <script>
-        
+        let number = +prompt("Введите любое число");
+				if(Number(number) && number != 0) {
+					let sum = 0;
+					for (let i = 0;i < number; i++) {
+						sum += i;
+					}
+					console.log(number);
+					console.log(sum);
+				} else if(number === NaN) {
+					alert('Вы ввели не число');
+				}else {
+					alert('Значение пусто или равно нулю');
+				}
     </script>
 </body>
 </html>

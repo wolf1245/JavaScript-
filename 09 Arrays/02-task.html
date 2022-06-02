@@ -15,16 +15,13 @@
     <script>
         let values = [10, 20, 4, 6, 11, 9, 125, 1, 8, 0, 3];
         let max = Number.MIN_VALUE;
-
-        for (let index = 0; index < values.length; index++) 
+        for (let number of values) 
         {
-            const element = values[index];
-            if(element > max)
+            if(number > max)
             {
-                max = element;
+                max = number;
             }
         }
-
         console.log("Максимальное значение массива - " + max);
     </script>
 </body>
