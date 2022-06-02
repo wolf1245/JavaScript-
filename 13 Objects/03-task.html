@@ -249,7 +249,11 @@
         ];
 
         for (const user of users) {
-            console.log(user.name + " from " + user.address.city);
+					if(user.company.name == 'Keebler LLC') {
+						console.log(user.name + " from " + user.address.city);
+					} else {
+						continue;
+					}
         }
     </script>
 </body>
